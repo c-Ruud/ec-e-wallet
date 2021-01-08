@@ -7,7 +7,6 @@
       <router-link to="/about">About</router-link>
     </div>
     <hr />
-    <!--<p class="card-type">Your card</p>-->
   </header>
 </template>
 
