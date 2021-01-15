@@ -1,8 +1,8 @@
 <template>
   <div class="home">
     <top></top>
-    <card-item :card="card" v-if="card"> </card-item>
-    <card-stack @showCard="click"></card-stack>
+    <card-item @delete="deletea" :card="card" v-if="card" > </card-item>
+    <card-stack  @showCard="click"></card-stack>
     <a href="#" class="cta" v-on:click="$router.push({ path: '/addcard' })"
       >Add a new card</a
     >
@@ -33,6 +33,10 @@ export default {
       };
       return this.$root.cardInfo.idCard;
     },
+    deletea(myCard) {
+      /*this.$root.cardInfo = this.$root.cardInfo.filter(tabort => tabort.idCard != myCard.idCard);*/
+      this.$root.cardInfo.splice(myCard, 1);
+    }
   },
   data() {
     return {

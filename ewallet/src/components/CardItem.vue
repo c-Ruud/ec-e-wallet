@@ -21,6 +21,7 @@
         <p>{{ card.month }}/{{ card.year }}</p>
       </aside>
     </section>
+      <button v-on:click="$emit('delete')" class="del">X</button>
   </div>
 </template>
 <script>
@@ -139,5 +140,18 @@ p {
   background: linear-gradient(248.3deg, rgba(0, 0, 0, 0.16), transparent),
     #f33355;
   color: #fff;
+}
+.del {
+  background-color: lightgray;
+  color: black;
+  border-style: solid;
+  height: 20px !important;
+  width: 20px !important;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: absolute;
+  margin-top: -12px;
+  margin-left: -12px;
 }
 </style>
